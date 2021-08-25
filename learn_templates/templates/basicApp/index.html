@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "basicApp/base.html" %}
+{% load my_extras %}
+  {% block body_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <h3>This is index.html page showing!!</h3>
+    <!--  the | is to apply a python method, so upper is being used
+          on text-->
+    <h1> {{ text|mycut:'hello' }} </h1>
+    <!--  the | is to apply a python method,
+     25 is being added to 100-->
+    <h4> {{ number|add:"25" }} </h4>
+    {% endblock %}
